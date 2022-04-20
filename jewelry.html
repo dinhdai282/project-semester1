@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry | SIMPLON’s Beauty Care Centre | Cosmetics and accessories</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/92d9d22f8b.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-12">
+                    <div class="btn-group">
+                        <button class="btn border dropdown-toggle my-md-4 my-2 text-white" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            USD
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">VND</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <h2 class="my-md-3 site-title primary-color">Simplon</h2>
+                </div>
+                <div class="col-md-4 col-12 text-right">
+                    <p class="my-md-4 header-links">
+                        <a href="account.html" class="px-2">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <span class="navbar-brand mb-0 h1 primary-color pacifico">Simplon</span>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Product
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="hair.html">Hair</a>
+                        <a class="dropdown-item" href="skin.html">Skin</a>
+                        <a class="dropdown-item" href="makeupkit.html">Makeup Kit</a>
+                        <a class="dropdown-item" href="nailpaint.html">Nail Paint</a>
+                        <a class="dropdown-item" href="nailart.html">Nail Art</a>
+                        <a class="dropdown-item" href="jewelry.html">Jewelry</a>
+                        <a class="dropdown-item" href="weddingkit.html">Wedding Kit</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="upcoming.html">New Product</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success mr-sm-2" type="submit"><i class="fa fa-search"></i></button>
+                <input class="form-control my-2 my-sm-0" type="search" placeholder="Please input something..."
+                    aria-label="Search">
+            </form>
+            <button class="nav-item mx-2 basket-icon" data-toggle="modal" data-target="#cart">
+                <i class="fa fa-shopping-basket p-2" aria-hidden="true"> (<span class="total-count"></span>)</i>
+            </button>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Modal -->
+    <div class="modal fade" style="font-family: Arial" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="container allproduct">
+        <h2 class="textcover">Jewelry</h2>
+        <div class="row row1">
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry1.jpg" alt="Blue & White Sapphire Radial Ring">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="Blue&White-Sapphire" data-price="34"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>Blue & White Sapphire Radial Ring</h3>
+                    <h5>$34</h5>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry2.jpg" alt="Ruby & White Topaz Ring">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="Blue&White-Topaz" data-price="39"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <h3>Ruby & White Topaz Ring</h3>
+                    <h5>$39</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry3.jpg" alt="Filigree Medallion Pendant">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="MedallionPendant" data-price="34"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <h3>Filigree Medallion Pendant</h3>
+                    <h5>$34</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry4.jpg" alt="ST. Christopher Medallion Necklace">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="MedallionNecklace" data-price="29"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                    <i class="fa fa-star-o"></i>
+                    <h3>ST. Christopher Medallion Necklace</h3>
+                    <h5>$29</h5>
+                </div>
+            </div>
+        </div>        
+        
+        <div class="row row1">
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry5.jpg" alt="Oval Drop Earrings With Teal Swarovski Zirconia">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="OvalDrop" data-price="79"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>Oval Drop Earrings With Teal Swarovski Zirconia</h3>
+                    <h5>$79</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry6.jpg" alt="Diamond Halo Stud Earrings">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="DiamondHalo" data-price="109"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>Diamond Halo Stud Earrings</h3>
+                    <h5>$109</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry7.jpg" alt="Circle Link Bracelet">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="CircleLink" data-price="34"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>Circle Link Bracelet</h3>
+                    <h5>$34</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="images/product/jewelry/jewelry8.jpg" alt="Diamond Tennis Bracelet">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-outline-light" title="Quick Shop"><i
+                                class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-outline-light" title="Add to Wishlist"><i
+                                class="fa fa-heart-o"></i></button>
+                        <button type="button" class="add-to-cart btn btn-outline-light" title="Add to Cart" data-name="DiamondTennis" data-price="39"><i
+                                class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <h3>Diamond Tennis Bracelet</h3>
+                    <h5>$39</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>SIMPLON’s Beauty Care Centre</h6>
+                    <p class="text-justify">590 Cach Mang Thang Tam, Ward 11, District 3<br> Ho Chi Minh
+                        City<br>Viet Nam<br>
+                        <b>Hotline</b>: <a href="tel:028 7300 8866">028 7300 8866</a><br>
+                        <b>Email</b>: <a href="mailto:simplonsupporter@gmail.com">simplonsupporter@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Product</h6>
+                    <ul class="footer-links">
+                        <li><a href="hair.html">Hair</a></li>
+                        <li><a href="skin.html">Skin</a></li>
+                        <li><a href="makeupkit.html">Makeup Kit</a></li>
+                        <li><a href="nailpaint.html">Nail Paint</a></li>
+                        <li><a href="nailart.html">Nail Art</a></li>
+                        <li><a href="jewelry.html">Jewelry</a></li>
+                        <li><a href="weddingkit.html">Wedding Kit</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                        <a href="#">Group 8</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a class="dribbble" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Script -->
+</body>
+
+</html>
